@@ -1,12 +1,13 @@
 <template>
-    <lightning-layout >
+    <lightning-layout multiple-rows>
         <!-- Top -->
         <lightning-layout-item size="12">
           <lightning-card title="Find a Boat">
-            <!-- New Boat button goes here -->
+            <lightning-button variant="base" label="Base" title="Looks like a link" onclick={createNewBoat} class="slds-m-left_x-small"></lightning-button>
+
             <p class="slds-var-p-horizontal_small">
               <!-- boatSearchForm component goes here -->
-              <c-boat-search-form></c-boat-search-form>
+              <c-boat-search-form selected-boat-type-id={selectedBoatTypeId} onsearch={searchBoats}></c-boat-search-form>
             </p>
           </lightning-card>
         </lightning-layout-item>
